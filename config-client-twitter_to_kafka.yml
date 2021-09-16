@@ -1,3 +1,6 @@
+server:
+  port: 8181
+
 twitter-to-kafka-service:
   twitter-keywords:
     - Elon Musk
@@ -5,14 +8,14 @@ twitter-to-kafka-service:
     - ethereum
     - binance
   welcome-message: Hello microservices!
-  enable-mock-tweets: false
-  mock-min-tweet-length: 15
+  enable-mock-tweets: true
+  mock-min-tweet-length: 5
   mock-max-tweet-length: 15
-  mock-sleep-ms: 1000
+  mock-sleep-ms: 10000
 
 retry-config:
   initial-interval-ms: 1000
-  max-interval-ms: 1000
+  max-interval-ms: 10000
   multiplier: 2.0
   maxAttempts: 3
   sleep-time-ms: 2000
